@@ -1,8 +1,55 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Press+Start+2P&display=swap');
+
+/* font-family: 'Press Start 2P', cursive; */
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: url('../images/index.jpg') no-repeat fixed center/cover;
+  font-family: 'Acme', sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  
+  text-decoration: none;
 }
+
+/* user navbar section */
+
+.user-nav{
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content:center  ;
+  
+}
+
+.user-nav-elements {
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.user-nav-elements li{
+  margin-left: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+/* INFO SECTION  */
+
+.left-info{
+  height: 80vh;
+  font-style:"Press Start 2P,cursive";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+

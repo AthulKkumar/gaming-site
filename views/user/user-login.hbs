@@ -1,26 +1,40 @@
-<section>
+<section class="login-section">
     <div class="container mt-4">
-        <div class="row">
+        <div class="row login-left-right">
 
-              <div class="col-md-6">
-                <h2>Log In</h2>
-             
+            <div class="col-md-6 login-left">
+
+                <h1>Welcome Back</h1>
+
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem ut quo nulla et nisi
+                    consequatur at ducimus culpa, praesentium porro minima odit distinctio? Ab architecto, vero minus
+                    distinctio perspiciatis consequatur!</p>
             </div>
 
-            <div class="col-md-6">
-                <h2>Log In</h2>
-                <form action="/login" method="post">
-                    <label for="">Email</label>
-                    <input type="email" name="email" class="form-control">
+            <div class="col-md-6 login-right">
+                <div class="container login-part p-2">
+                    <h2 class="m-3" style="color: white;">Log In</h2>
+                    <hr>
 
-                    <label for="">Password</label>
-                    <input type="password" name="password" class="form-control">
-                  
-                    <a href="/signup" class="">New account</a>
+                    {{#if loginErr}}
+                    <div class="alert alert-danger position-relative" role="alert">
+                        Invalid crendintials
+                    </div>
+                    {{/if}}
 
-                    <button type="submit" class="btn btn-primary mt-4 ">Submit</button>
-                  
-                </form>
+                    <form action="/login" method="post" class="p-2">
+                        <label for="">Email</label>
+                        <input type="email" name="email" class="form-control">
+
+                        <label for="">Password</label>
+                        <input type="password" name="password" class="form-control">
+
+                        <a href="/signup" class="mt-4">Create An Account ?</a>
+
+                        <button type="submit" class="btn btn-primary mt-4 ">Submit</button>
+
+                    </form>
+                </div>
             </div>
         </div>
     </div>

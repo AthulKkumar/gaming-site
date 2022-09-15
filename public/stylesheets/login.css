@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Press+Start+2P&display=swap');
+
+/* font-family: 'Press Start 2P', cursive; */
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Acme', sans-serif;
+  background: url('../images/login.jpg') no-repeat center/cover;
+}
+
+a {
+  
+  text-decoration: none;
+}
+/* navbar section */
+.user-nav{
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content:center  ;
+  }
+  
+  .user-nav-elements {
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    flex-grow: 1;
+  }
+  
+  .user-nav-elements li{
+    margin-left: 1rem;
+    padding: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+
+  /* LOGIN SECTION  */
+
+  /* .login-section{
+    height: 50vh;
+    background-color: burlywood;
+  } */
+
+  .login-left-right{
+    height: 80vh;
+    display: flex;
+  }
+
+  .login-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+  }
+
+  .login-right{
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-part{
+    /* background: linear-gradient(to top, #0099ff 0%, #ffffff 100%); */
+    backdrop-filter: blur(100px);
+    /* background-color: whitesmoke; */
+    width: 80%;
+    height: 55vh;
+    border-radius: 10px;
+  }
+
+  .login-part form a{
+    float: left;
+    color:azure;
+    margin: 10px ;
+  }
+
+  .login-part form label{
+    margin: 10px ;
+    color: azure;
+  }
+
+  .login-part form button{
+    float:right;
+  }

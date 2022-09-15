@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const dotenv = require('dotenv');
 const hbs = require('express-handlebars');
+const session = require('express-session');
 const mongoose = require('mongoose');
 
 var adminRouter = require('./routes/admin');
@@ -25,6 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({secret:'key', resave: false,saveUninitialized: true,cookie:{maxAge:600000}}))
 
 app.use('/', userRouter);
 app.use('/admin', adminRouter);
