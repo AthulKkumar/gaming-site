@@ -1,34 +1,52 @@
 <nav class="navbar navbar-expand-lg user-nav">
   <div class="container-fluid">
-    
+
     <div class="col-md-6">
-      <a href="/">Js Game</a>
+      <a href="/">GAMEIFICATION</a>
     </div>
 
     <div class="col-md-6">
-
+      {{!-- nav bar section for the user --}}
       <nav class="user-nav">
 
         <ul class="user-nav-elements">
+          {{!-- Checks whether the user is present or not --}}
           {{#if user}}
-            <li><a href="/gamepage"> Home</a></li>
+          <li><a href="/gamepage"> Home</a></li>
 
-            <li><a href="/">{{user.username}}</a></li>
+          <li>
+            {{!-- dropdown section for the user if present  --}}
+            <div class="btn-group">
+              <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown"
+                data-bs-display="static" aria-expanded="false" id="acc-btn">
+                {{user.username}}
+              </button>
 
-            <li><a href="/logout">Logout</a></li>
-          {{else}}  
-            <li><a href="/"> Home</a></li>
+              <ul class="dropdown-menu dropdown-menu-lg-end ">
+                <li><a class="dropdown-item text-primary" href="/account">Account</a></li>
+                <li><a class="dropdown-item text-danger" href="/logout">LogOut</a></li>
+              </ul>
 
-            <li><a href="/">About</a></li>
+            </div>
 
-            <li><a href="/login">Login</a></li>
-          {{/if}}
+          </li>
+
+        </ul>
+
+        {{!-- If the user is not loged in --}}
+        {{else}}
+        <li><a href="/"> Home</a></li>
+
+        <li><a href="/">About</a></li>
+
+        <li><a href="/login">Login</a></li>
+        {{/if}}
 
         </ul>
 
       </nav>
-  
+
     </div>
-  
+
   </div>
 </nav>

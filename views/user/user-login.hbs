@@ -11,10 +11,14 @@
                     distinctio perspiciatis consequatur!</p>
             </div>
 
+            {{!-- Login part  --}}
+
             <div class="col-md-6 login-right">
                 <div class="container login-part p-2">
                     <h2 class="m-3" style="color: white;">Log In</h2>
                     <hr>
+
+                    {{!-- checks if the  user enters valid data or not  --}}
 
                     {{#if loginErr}}
                     <div class="alert alert-danger position-relative" role="alert">
@@ -22,6 +26,8 @@
                     </div>
                     {{/if}}
 
+                    {{!-- form body  --}}
+                    
                     <form action="/login" method="post" class="p-2">
                         <label for="">Email</label>
                         <input type="email" name="email" class="form-control">

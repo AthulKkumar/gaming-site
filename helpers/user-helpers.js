@@ -1,6 +1,9 @@
 require('../db/connection')
 const User = require('../db/schema/userSchema');
+const ScoreBoard = require('../db/schema/score');
 const bcrypt = require('bcrypt');
+var ObjectId = require('mongoose').Types.ObjectId;
+const { response } = require('express');
 
 
 module.exports = {
@@ -60,6 +63,50 @@ module.exports = {
                 reject()
                 // resolve({status:false})
             }
+        })
+    },
+    //Function for storing the score of the scramble game
+    wordScrambler : (score,userId)=>{
+        console.log(score);
+        console.log(userId);
+
+        return new Promise(async(resolve,reject)=>{
+            const userScoreBoard = await ScoreBoard.collection.findOne({ user: userId })
+            console.log(userScoreBoard);
+            //Checks whether the user has scoreboard or not
+            if(userScoreBoard){
+                console.log('yo');
+                //Search for the user scooreboard and update the scramble score 
+                let scoreuser = await ScoreBoard.collection.updateOne({ user : userId },
+                            {
+                                $set : { 'wordscrambler.wordscore' : score }
+                            }
+                        )
+                        // .then((response) => {
+                        //     console.log('ih');
+                        //     resolve()
+
+                        // })
+                        console.log(scoreuser);
+                        resolve()
+
+            }//If the user has no score card it will create new score card for scramble word game
+            else{
+
+                let scoreObj = {
+                    user : userId,
+                    wordscrambler : {
+                        wordscore : []
+                    }
+                }
+
+                ScoreBoard.collection.insertOne(scoreObj).then((response)=>{
+                    resolve()
+                })
+
+
+            }
+
         })
     }
 

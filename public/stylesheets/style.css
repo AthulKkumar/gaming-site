@@ -4,7 +4,7 @@
 /* font-family: 'Press Start 2P', cursive; */
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: url('../images/index.jpg') no-repeat fixed center/cover;
+  background: url('../images/index\ \(2\).jpg') no-repeat fixed center/cover;
   font-family: 'Acme', sans-serif;
 }
 
@@ -20,7 +20,7 @@ a {
   font-weight: bold;
   display: flex;
   flex-direction: row;
-  justify-content:center  ;
+  justify-content:flex-start  ;
   
 }
 

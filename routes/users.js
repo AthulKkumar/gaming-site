@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const userHelpers = require('../helpers/user-helpers')
+const verifyLogin = require('../middleware/verify-user')
 require('../db/connection')
 
 /* GET users listing. */
@@ -64,5 +65,26 @@ router.get('/logout',(req,res)=>{
   req.session.destroy();
   res.redirect('/login')
 })
+//Router which get the details of the logdein user
+router.get('/account',(req,res)=>{
+  res.render('user/user-account-details',{style:'useraccount.css'})
+})
+//Word scrambler game
+router.get('/wordscrambler',verifyLogin,(req,res)=>{
+
+  res.render('user/word-scrambler',{style:'wordscrambler.css',user:req.session.user})
+})
+//Sending the score details
+router.post('/wordscramblescore',(req,res)=>{
+  let user = req.session.user._id;
+  // console.log(user);
+  userHelpers.wordScrambler(req.body,user).then(()=>{
+    console.log();
+  })
+})
+
+// router.post('/scramble-score',(req,res)=>{
+//   console.log(req.body);
+// })
 
 module.exports = router;

@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Press+Start+2P&display=swap');
+
+/* font-family: 'Press Start 2P', cursive; */
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: url('../images/sramble.jpg') no-repeat fixed center/cover;
+  font-family: 'Acme', sans-serif;
+}
+
+a {
+  
+  text-decoration: none;
+  color: black;
+}
+
+/* user navbar section */
+
+.user-nav{
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start  ;
+  
+}
+
+.user-nav-elements {
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.user-nav-elements li{
+  margin-left: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  color: black;
+}
+
+/* GAME SECTION */
+
+.gamecontainer {
+  width: 50%;
+
+}
+
+.head{
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.gamearea {
+  background-color:chartreuse;
+  border-radius: 10px;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.gamearea h3{
+  margin: 1rem;
+}
+
+.gamearea input {
+  width: 70%;
+  padding: 0.4rem;
+  margin: 2rem;
+  border-radius: 10px;
+  outline: none;
+  border-style: none;
+  text-transform: lowercase;
+}
+
+#btn {
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.5s;
+
+}
+
+#btn:hover, #btn:active {
+  letter-spacing: 0.125rem;
+  word-spacing: 0.2rem;
+}
+
+.hidden {
+  display: none;
+}

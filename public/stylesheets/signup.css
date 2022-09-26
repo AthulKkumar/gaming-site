@@ -4,12 +4,11 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   font-family: 'Acme', sans-serif;
-  background: url('../images/signup.jpg') no-repeat center/cover ;
+  background: url('../images/signup\ \(2\).jpg') no-repeat center/cover ;
 }
 
 
 a {
-  
   text-decoration: none;
 }
 /* navbar section */
