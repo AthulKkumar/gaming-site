@@ -21,7 +21,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content:flex-start  ;
-  
+  background-color: greenyellow;
 }
 
 .user-nav-elements {
@@ -33,7 +33,7 @@ a {
 
 .user-nav-elements li{
   margin-left: 1rem;
-  padding: 1rem;
+  padding: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

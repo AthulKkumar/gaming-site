@@ -20,8 +20,8 @@ module.exports = {
             const userExist = await User.findOne({ username: username })
 
             if (userExist) {
-               return reject('username exist')
-               
+                return reject('username exist')
+
             } else if (password != cpassword) {
                 console.log('password is incorrect');
             }
@@ -66,41 +66,42 @@ module.exports = {
         })
     },
     //Function for storing the score of the scramble game
-    wordScrambler : (score,userId)=>{
+    wordScrambler: (score, userId) => {
         console.log(score);
         console.log(userId);
 
-        return new Promise(async(resolve,reject)=>{
+        return new Promise(async (resolve, reject) => {
             const userScoreBoard = await ScoreBoard.collection.findOne({ user: userId })
             console.log(userScoreBoard);
             //Checks whether the user has scoreboard or not
-            if(userScoreBoard){
+            if (userScoreBoard) {
                 console.log('yo');
                 //Search for the user scooreboard and update the scramble score 
-                let scoreuser = await ScoreBoard.collection.updateOne({ user : userId },
-                            {
-                                $set : { 'wordscrambler.wordscore' : score }
-                            }
-                        )
-                        // .then((response) => {
-                        //     console.log('ih');
-                        //     resolve()
+                let scoreuser = await ScoreBoard.collection.updateOne({ user: userId },
+                    {
+                        $set: { 'wordscrambler': score }
+                    }
+                )
+                // .then((response) => {
+                //     console.log('ih');
+                //     resolve()
 
-                        // })
-                        console.log(scoreuser);
-                        resolve()
+                // })
+                console.log(scoreuser);
+                resolve()
 
             }//If the user has no score card it will create new score card for scramble word game
-            else{
+            else {
+                // console.log(score.score);
 
                 let scoreObj = {
-                    user : userId,
-                    wordscrambler : {
-                        wordscore : []
+                    user: userId,
+                    wordscrambler: {
+                        score: score.score //The score value
                     }
                 }
 
-                ScoreBoard.collection.insertOne(scoreObj).then((response)=>{
+                ScoreBoard.collection.insertOne(scoreObj).then((response) => {
                     resolve()
                 })
 
@@ -108,6 +109,32 @@ module.exports = {
             }
 
         })
+    },
+    //Function that checks if the user is eligable for another game
+    //It takes the score from the scramble game
+    checkLevel: (userId) => {
+        return new Promise(async (resolve, reject) => {
+            console.log(userId);
+            //Search wheter the user has scoreboard or not
+            const scoreBoardExist = await ScoreBoard.collection.findOne({ user: userId });
+            // console.log(scoreBoardExist);
+            // if user hs not scorebosrd it will rject otherwise it will return the score from the scoreboard
+            if (scoreBoardExist == null) {
+                reject(null)
+            } else {
+                const userScoreBoard = await ScoreBoard.collection.aggregate([
+                    {
+                        $match: { user: userId }
+                    },
+                    {
+                        $project: { score: '$wordscrambler.score' }
+                    }
+                ]).toArray();
+                // console.log(userScoreBoard[0].score);
+                resolve(userScoreBoard[0].score)
+            }
+        })
     }
+
 
 }

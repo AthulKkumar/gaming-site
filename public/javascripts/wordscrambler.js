@@ -6,7 +6,7 @@ const score = document.querySelector('.score');
 let play = false;
 let newWord = '';
 let randomWord = '';
-let sWords = ['apple', "orange", 'mango', "pineapple"]
+let sWords = ['apple', "orange", 'mango', "pineapple",'grapes','banana','carrot','potato','watermelon','stawberry']
 let scoreCount = 0;
 //Function to pick random words from the sWords
 const createNewWord = () => {

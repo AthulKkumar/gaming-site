@@ -7,10 +7,12 @@
             <hr>
 
             <div class="float-left w-75 p-3 user-card-details">
-
-                <h5>User Name :</h5>
-                <h5>Email :</h5>
+                {{#if user}}
+                <h5>User Name : {{user.username}}</h5>
+                <h5>Email : {{user.email}}</h5>
                 <h5>Status : Online</h5>
+                <a href="/logout" class="btn btn-danger">Log Out</a>
+                {{/if}}
             </div>
 
         </div>

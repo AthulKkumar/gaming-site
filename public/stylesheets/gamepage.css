@@ -69,10 +69,13 @@ a {
 
 .card-details button {
   cursor: pointer;
+  float:right;
+  margin-top: 12px;
+  margin-right: 14px;
 }
 
 #acc-btn {
-  z-index: -1;
+  /* z-index: -1;  */
 }
 
 .card img{
