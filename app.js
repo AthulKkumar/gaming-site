@@ -11,6 +11,7 @@ const mongoose = require('mongoose');
 var adminRouter = require('./routes/admin');
 var userRouter = require('./routes/users');
 
+
 var app = express();
 
 dotenv.config({path:'./config.env'});
@@ -31,6 +32,7 @@ app.use(session({secret:'key', resave: false,saveUninitialized: true,cookie:{max
 app.use('/', userRouter);
 app.use('/admin', adminRouter);
 
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -46,5 +48,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;

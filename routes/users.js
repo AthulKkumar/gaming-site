@@ -97,7 +97,7 @@ router.get('/snake', verifyLogin, (req, res) => {
   userHelpers.checkLevel(user).then((response) => {
     // console.log(response);
     // It will check iff the user is eligable for play this game
-    if (response > 4) {
+    if (response > 2) {
       res.render('user/snake', { style: 'snake.css', js: 'snake.js' })
     } else {
       // res.json({status:true})
