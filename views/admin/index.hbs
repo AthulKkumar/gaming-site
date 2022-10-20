@@ -1,6 +1,6 @@
-<div class="container mt-4">
+<div class="container mt-4 p-4 w-50">
 
-<table class="table">
+<table class="table text-light table-dark">
   <thead class="thead-dark">
     <tr>
       <th scope="col">User Name</th>
@@ -9,7 +9,7 @@
   </thead>
   <tbody>
     {{#each users}}
-    <tr>
+    <tr class="table-secondary">
       <th scope="row">{{this.username}}</th>
       <td>{{this.email}}</td>
     </tr>

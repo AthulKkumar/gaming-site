@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Press+Start+2P&display=swap');
+
+/* font-family: 'Press Start 2P', cursive; */
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Acme', sans-serif;
+  background: url('../images/gamepage.jpg') no-repeat center/cover;
+  height: 100vh;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+

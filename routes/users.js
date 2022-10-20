@@ -110,4 +110,14 @@ router.get('/snake', verifyLogin, (req, res) => {
     })
 })
 
+//Memory game
+router.get('/memorygame',verifyLogin,(req,res)=>{
+  // let user = req.session.user._id;
+  res.render('user/memorygame',{style:'memorygame.css',js:'memorygame.js'})
+})
+
+//Tictactoe game
+router.get('/tictactoe',verifyLogin,(req,res)=>{
+  res.render('user/tictactoe',{style:"tictactoe.css",js:"tictactoe.js"})
+})
 module.exports = router;

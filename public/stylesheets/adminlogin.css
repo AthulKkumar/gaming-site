@@ -4,7 +4,7 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   font-family: 'Acme', sans-serif;
-  background: url('../images/gamepage2.jpg') no-repeat ;
+  /* background: url('../images/gamepage2.jpg') no-repeat center/cover; */
   height: 100vh;
 }
 
@@ -38,51 +38,8 @@ a {
     list-style: none;
   }
 
+  /* LOGIN SECTION  */
 
-/* CARD SECTION  */
-
-.card{
-  background-color: rgb(158, 222, 194);
-  width: 100%;
-  height: 30vh;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  border-radius: 10px;
-  /* z-index: -1; */
-  
-}
-
-.card-details{
-  
-  height: 15vh;
-  /* position: absolute; */
-  width: 95%;
-  backdrop-filter: blur(50px);
-}
-
-.card-details a{
-  float:right;
-  margin-top: 12px;
-  margin-right: 14px;
-}
-
-.card-details button {
-  cursor: pointer;
-  float:right;
-  margin-top: 12px;
-  margin-right: 14px;
-}
-
-#acc-btn {
-  /* z-index: -1;  */
-}
-
-.card img{
-  height: inherit;
-}
-
-#card1 {
-  background: url('../images/scam2.jpg') no-repeat center;
-
+.loginBox {
+    background-color: brown ;
 }
