@@ -10,6 +10,8 @@ router.get('/', function (req, res, next) {
 });
 //Login page
 router.get('/login', (req, res) => {
+  // console.log(req.session.user);
+  // console.log(req.session.loggedIn);
   if (req.session.loggedIn) {
     res.redirect('/gamepage')
   } else {
@@ -25,6 +27,7 @@ router.get('/signup', (req, res) => {
 
 router.get('/gamepage', (req, res) => {
   let user = req.session.user
+  console.log(user);
   //Checks the user is logged in or not
   if (req.session.loggedIn) {
     res.render('user/game-page', { style: 'gamepage.css', user, js: 'gamepage.js' })
@@ -32,12 +35,14 @@ router.get('/gamepage', (req, res) => {
     res.redirect('/login')
   }
 })
+
+
 //Getting the user details from signup page
 router.post('/signup', (req, res) => {
   userHelpers.doSignup(req.body).then((response) => {
 
     req.session.loggedIn = true;
-    req.session.user = response; //Adding the user to session
+    req.session.user = response  ; //Adding the user to session
     console.log('sign in succesfully');
     res.redirect('/login')
   }).catch((err) => {
@@ -51,7 +56,7 @@ router.post('/login', (req, res) => {
     //Checks whether user is valid or not
     if (response) {
       req.session.loggedIn = true
-      req.session.user = response.user
+      req.session.user = response
       res.redirect('/gamepage')
     }
   }).catch((err) => {
@@ -60,6 +65,9 @@ router.post('/login', (req, res) => {
     res.redirect('/login') //If user is not valid 
   })
 })
+
+
+
 //Logout section for user
 router.get('/logout', (req, res) => {
   req.session.destroy();
@@ -97,8 +105,10 @@ router.get('/snake', verifyLogin, (req, res) => {
   userHelpers.checkLevel(user).then((response) => {
     // console.log(response);
     // It will check iff the user is eligable for play this game
+
     if (response > 2) {
       res.render('user/snake', { style: 'snake.css', js: 'snake.js' })
+
     } else {
       // res.json({status:true})
       res.status(200).redirect('/gamepage')//It will return an status code to the front end

@@ -5,6 +5,7 @@ var router = express.Router();
 /* GET home page. */
 
 router.get('/', function(req, res, next) {
+
 adminHelpers.getAllUsers().then((users)=>{
   res.render('admin/index', {admin:true , users,style:"admin.css"});
 })
@@ -21,6 +22,7 @@ adminHelpers.adminLogin(req.body).then(()=>{
 }).catch((err)=>{
   res.redirect('/admin/adminlogin')
 })
+
 })
 
 module.exports = router;

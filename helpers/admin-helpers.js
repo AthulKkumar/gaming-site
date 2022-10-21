@@ -16,6 +16,7 @@ module.exports = {
     adminLogin : (adminDetail)=>{
         console.log(adminDetail);
         return new Promise(async(resolve,reject)=>{
+            
             let adminEmail = 'admin@123';
             let password = '123';
             let admin = await Adminlog.collection.find();
@@ -23,6 +24,7 @@ module.exports = {
             console.log(adminDetail.email);
 
             if (adminEmail == adminDetail.email && password == adminDetail.password){
+
                 resolve()
             }else{
                 reject()
