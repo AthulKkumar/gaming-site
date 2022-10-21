@@ -37,3 +37,10 @@ a {
     align-items: center;
     list-style: none;
   }
+
+
+  /* LOGIN SECTION  */
+
+.loginBox {
+    background-color: brown ;
+}

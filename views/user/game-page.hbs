@@ -12,7 +12,7 @@
     {{!-- Game card section --}}
 
     {{!-- #1 --}}
-    <div class="card mt-3">
+    <div class="card mt-3" id="card1">
       {{!-- <img src="/images/scam2.jpg" alt="" srcset=""> --}}
       <div class="card-details">
 
@@ -25,10 +25,34 @@
     {{!-- #2 --}}
     <div class="card mt-5">
 
-      <div class="card-details">
+      <div class="card-details" >
 
         <h3>Snake</h3>
         <a href="/snake" class="btn btn-primary" onclick="checkLvl(event)">Play</a>
+        {{!-- <button class="btn btn-primary" onclick="checkLvl( )">Play</button> --}}
+
+      </div>
+    </div>
+
+    {{!-- #3 --}}
+    <div class="card mt-5">
+
+      <div class="card-details">
+
+        <h3>Memory game</h3>
+        <a href="/memorygame" class="btn btn-primary" onclick="checkLvl(event)">Play</a>
+        {{!-- <button class="btn btn-primary" onclick="checkLvl( )">Play</button> --}}
+
+      </div>
+    </div>
+
+    {{!-- #4 --}}
+    <div class="card mt-5">
+
+      <div class="card-details">
+
+        <h3>Tic Tac Toe</h3>
+        <a href="/tictactoe" class="btn btn-primary" onclick="checkLvl(event)">Play</a>
         {{!-- <button class="btn btn-primary" onclick="checkLvl( )">Play</button> --}}
 
       </div>

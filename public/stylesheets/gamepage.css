@@ -4,7 +4,7 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   font-family: 'Acme', sans-serif;
-  background: url('../images/gamepage2.jpg') no-repeat center/cover;
+  background: url('../images/gamepage2.jpg') no-repeat ;
   height: 100vh;
 }
 
@@ -80,4 +80,9 @@ a {
 
 .card img{
   height: inherit;
+}
+
+#card1 {
+  background: url('../images/scam2.jpg') no-repeat center;
+
 }
