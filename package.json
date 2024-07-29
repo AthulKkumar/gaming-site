@@ -6,7 +6,7 @@
     "node": "16.x"
   },
   "scripts": {
-    "start": " ./bin/www -e js,hbs,css,json"
+    "start": " ./app.js"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
