@@ -1,3 +1,4 @@
+
 # Gaming Centre - Modern Full-Stack Gaming Platform
 
 A complete migration from session-based Handlebars application to modern React SPA with JWT authentication.
@@ -230,3 +231,4 @@ This project is licensed under the ISC License.
 ---
 
 Built with ❤️ using React, Express, and MongoDB 
+
