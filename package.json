@@ -15,7 +15,9 @@
     "client:build": "cd client && npm run build",
     "install:all": "npm install && cd server && npm install && cd ../client && npm install",
     "build": "npm run client:build",
-    "deploy": "npm run client:build && npm run server:start"
+    "deploy": "npm run client:build && npm run server:start",
+    "start:server": "cd server && npm start",
+    "start:client": "cd client && npm start"
   },
   "keywords": [
     "gaming",
