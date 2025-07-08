@@ -1,0 +1,117 @@
+.game-page {
+  @apply space-y-8;
+}
+
+.page-header {
+  @apply text-center space-y-4;
+}
+
+.page-title {
+  @apply text-3xl md:text-4xl font-bold text-white;
+}
+
+.page-subtitle {
+  @apply text-lg text-gray-300 max-w-2xl mx-auto;
+}
+
+.games-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6;
+}
+
+.game-card {
+  @apply bg-gray-800 border border-gray-700 rounded-lg p-6 hover:bg-gray-750 transition-all duration-300;
+}
+
+.game-card.locked {
+  @apply opacity-75 border-gray-600;
+}
+
+.game-icon {
+  @apply text-4xl mb-4 text-center;
+}
+
+.game-info {
+  @apply space-y-3 mb-6;
+}
+
+.game-name {
+  @apply text-xl font-semibold text-white;
+}
+
+.game-description {
+  @apply text-gray-300;
+}
+
+.game-meta {
+  @apply flex justify-between items-center text-sm;
+}
+
+.game-difficulty {
+  @apply px-2 py-1 bg-gray-700 text-gray-300 rounded;
+}
+
+.game-coins {
+  @apply text-yellow-400 font-semibold;
+}
+
+.game-actions {
+  @apply text-center;
+}
+
+.game-btn {
+  @apply inline-block w-full py-3 px-6 rounded-lg font-medium transition-colors;
+  text-decoration: none;
+}
+
+.game-btn.play {
+  @apply bg-gaming-accent hover:bg-green-600 text-white;
+}
+
+.game-btn.loading {
+  @apply bg-gray-600 text-gray-300 cursor-not-allowed;
+}
+
+.locked-info {
+  @apply text-center space-y-2;
+}
+
+.lock-message {
+  @apply text-red-400 font-semibold;
+}
+
+.lock-requirements {
+  @apply text-sm text-gray-400;
+}
+
+.current-stats {
+  @apply text-sm text-gray-500;
+}
+
+.guest-notice {
+  @apply mt-12 bg-gradient-to-r from-blue-900 to-purple-900 border border-blue-700 rounded-lg p-8;
+}
+
+.notice-content {
+  @apply text-center max-w-md mx-auto space-y-4;
+}
+
+.notice-content h3 {
+  @apply text-xl font-bold text-white;
+}
+
+.notice-content p {
+  @apply text-blue-200;
+}
+
+.notice-content ul {
+  @apply text-left space-y-2 text-blue-200;
+}
+
+.notice-content li {
+  @apply flex items-center;
+}
+
+.signup-btn {
+  @apply inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors;
+  text-decoration: none;
+} 

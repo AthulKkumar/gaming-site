@@ -1,0 +1,73 @@
+.layout {
+  @apply min-h-screen bg-gaming-dark text-white;
+}
+
+.navbar {
+  @apply bg-gray-900 border-b border-gray-700 sticky top-0 z-50;
+}
+
+.nav-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16;
+}
+
+.nav-brand a {
+  @apply text-2xl font-bold text-gaming-accent hover:text-white transition-colors;
+  text-decoration: none;
+}
+
+.nav-menu {
+  @apply flex items-center space-x-6;
+}
+
+.nav-link {
+  @apply text-gray-300 hover:text-white transition-colors px-3 py-2 rounded-md text-sm font-medium;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  @apply text-gaming-accent bg-gray-800;
+}
+
+.login-btn {
+  @apply bg-gaming-accent hover:bg-green-600 text-white px-4 py-2 rounded-md transition-colors;
+  border: none;
+  cursor: pointer;
+}
+
+.user-dropdown {
+  @apply relative;
+}
+
+.user-btn {
+  @apply flex items-center space-x-2 bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-md transition-colors;
+  border: none;
+  cursor: pointer;
+}
+
+.user-coins {
+  @apply text-yellow-400 font-semibold;
+}
+
+.dropdown-arrow {
+  @apply text-xs;
+}
+
+.dropdown-menu {
+  @apply absolute right-0 mt-2 w-48 bg-gray-800 border border-gray-700 rounded-md shadow-lg z-10;
+}
+
+.dropdown-item {
+  @apply block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.logout-btn {
+  @apply text-red-400 hover:text-red-300;
+}
+
+.main-content {
+  @apply flex-1 container mx-auto px-4 py-8;
+} 

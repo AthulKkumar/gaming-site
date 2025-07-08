@@ -1,24 +1,35 @@
 {
-  "name": "gamingwebsite",
-  "version": "0.0.0",
+  "name": "gaming-website-fullstack",
+  "version": "2.0.0",
+  "description": "Modern gaming website with React frontend and Express backend",
   "private": true,
   "engines": {
     "node": "16.x"
   },
   "scripts": {
-    "start": " ./app.js"
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "start": "npm run server:start",
+    "server:dev": "cd server && npm run dev",
+    "server:start": "cd server && npm start",
+    "client:dev": "cd client && npm run dev",
+    "client:build": "cd client && npm run build",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "build": "npm run client:build",
+    "deploy": "npm run client:build && npm run server:start"
   },
-  "dependencies": {
-    "bcrypt": "^5.0.1",
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "dotenv": "^16.0.2",
-    "express": "~4.16.1",
-    "express-handlebars": "^6.0.6",
-    "express-session": "^1.17.3",
-    "hbs": "^4.2.0",
-    "http-errors": "~1.6.3",
-    "mongoose": "^6.5.4",
-    "morgan": "~1.9.1"
+  "keywords": [
+    "gaming",
+    "react",
+    "express",
+    "mongodb",
+    "jwt"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^8.2.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11"
   }
 }

@@ -1,0 +1,120 @@
+.home-page {
+  @apply space-y-16;
+}
+
+.hero-section {
+  @apply text-center py-16 bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg;
+}
+
+.hero-content {
+  @apply max-w-4xl mx-auto px-4;
+}
+
+.hero-title {
+  @apply text-4xl md:text-6xl font-bold text-white mb-6;
+}
+
+.hero-subtitle {
+  @apply text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto;
+}
+
+.welcome-user {
+  @apply space-y-6;
+}
+
+.welcome-message {
+  @apply text-2xl text-gaming-accent font-semibold;
+}
+
+.user-stats {
+  @apply flex justify-center space-x-8;
+}
+
+.stat-item {
+  @apply text-center;
+}
+
+.stat-value {
+  @apply block text-2xl font-bold text-white;
+}
+
+.stat-label {
+  @apply text-gray-400 text-sm;
+}
+
+.guest-section {
+  @apply space-y-6;
+}
+
+.guest-message {
+  @apply text-lg text-gray-300 max-w-2xl mx-auto;
+}
+
+.cta-buttons {
+  @apply flex flex-col sm:flex-row gap-4 justify-center;
+}
+
+.cta-button {
+  @apply inline-block bg-gaming-accent hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors;
+  text-decoration: none;
+}
+
+.cta-button.secondary {
+  @apply bg-gray-700 hover:bg-gray-600;
+}
+
+.cta-button.large {
+  @apply py-4 px-12 text-lg;
+}
+
+.features-section {
+  @apply text-center;
+}
+
+.features-title {
+  @apply text-3xl font-bold text-white mb-12;
+}
+
+.features-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8;
+}
+
+.feature-card {
+  @apply bg-gray-800 border border-gray-700 rounded-lg p-6 text-center hover:bg-gray-750 transition-colors;
+}
+
+.feature-icon {
+  @apply text-4xl mb-4;
+}
+
+.feature-card h3 {
+  @apply text-xl font-semibold text-white mb-3;
+}
+
+.feature-card p {
+  @apply text-gray-300;
+}
+
+.stats-section {
+  @apply text-center;
+}
+
+.stats-title {
+  @apply text-3xl font-bold text-white mb-8;
+}
+
+.game-preview {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6 mb-8;
+}
+
+.game-preview-card {
+  @apply bg-gray-800 border border-gray-700 rounded-lg p-6;
+}
+
+.game-preview-card h3 {
+  @apply text-lg font-semibold text-gaming-accent mb-2;
+}
+
+.game-preview-card p {
+  @apply text-gray-300;
+} 

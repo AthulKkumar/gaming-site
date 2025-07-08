@@ -1,0 +1,125 @@
+.word-scrambler-game {
+  @apply min-h-screen bg-gaming-dark text-white flex items-center justify-center p-4;
+}
+
+.game-container {
+  @apply max-w-2xl w-full bg-gray-800 border border-gray-700 rounded-lg overflow-hidden;
+}
+
+.game-header {
+  @apply bg-gray-900 p-6 border-b border-gray-700;
+}
+
+.game-title {
+  @apply text-2xl md:text-3xl font-bold text-center text-gaming-accent mb-4;
+}
+
+.game-stats {
+  @apply flex justify-center space-x-8;
+}
+
+.stat {
+  @apply text-center;
+}
+
+.stat-label {
+  @apply block text-gray-400 text-sm;
+}
+
+.stat-value {
+  @apply block text-xl font-bold text-white;
+}
+
+.game-content {
+  @apply p-6;
+}
+
+.start-screen {
+  @apply text-center space-y-6;
+}
+
+.instructions h2 {
+  @apply text-xl font-semibold text-white mb-4;
+}
+
+.instructions ul {
+  @apply text-left space-y-2 text-gray-300 max-w-md mx-auto;
+}
+
+.instructions li {
+  @apply flex items-start;
+}
+
+.start-btn {
+  @apply bg-gaming-accent hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors;
+  border: none;
+  cursor: pointer;
+}
+
+.playing-screen {
+  @apply space-y-6;
+}
+
+.word-display {
+  @apply text-center space-y-2;
+}
+
+.scrambled-word {
+  @apply text-3xl md:text-4xl font-bold text-gaming-accent tracking-wider;
+}
+
+.hint {
+  @apply text-gray-400;
+}
+
+.input-section {
+  @apply space-y-4;
+}
+
+.guess-input {
+  @apply w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gaming-accent focus:border-transparent text-center text-lg;
+}
+
+.submit-btn {
+  @apply w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-colors;
+  border: none;
+  cursor: pointer;
+}
+
+.message {
+  @apply text-center p-4 rounded-lg font-semibold;
+}
+
+.message.correct {
+  @apply bg-green-900 border border-green-700 text-green-300;
+}
+
+.message.incorrect {
+  @apply bg-red-900 border border-red-700 text-red-300;
+}
+
+.complete-screen {
+  @apply text-center space-y-6;
+}
+
+.final-message {
+  @apply text-2xl font-bold text-gaming-accent;
+}
+
+.final-stats {
+  @apply space-y-2 text-gray-300;
+}
+
+.final-stats p {
+  @apply text-lg;
+}
+
+.final-stats strong {
+  @apply text-white font-bold;
+}
+
+.play-again-btn {
+  @apply bg-gaming-accent hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors;
+  border: none;
+  cursor: pointer;
+} 

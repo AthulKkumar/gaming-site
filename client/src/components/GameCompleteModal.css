@@ -1,0 +1,132 @@
+.game-complete-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4;
+}
+
+.game-complete-modal {
+  @apply bg-gray-800 border border-gray-700 rounded-lg shadow-2xl max-w-lg w-full max-h-screen overflow-y-auto;
+}
+
+.modal-header {
+  @apply flex justify-between items-center p-6 border-b border-gray-700 bg-gray-900;
+}
+
+.modal-title {
+  @apply text-xl font-bold text-gaming-accent;
+}
+
+.close-btn {
+  @apply text-gray-400 hover:text-white text-2xl leading-none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.modal-content {
+  @apply p-6 space-y-6;
+}
+
+.game-info {
+  @apply text-center space-y-4;
+}
+
+.game-name {
+  @apply text-lg font-semibold text-white;
+}
+
+.score-display {
+  @apply flex justify-center items-center space-x-3;
+}
+
+.score-label {
+  @apply text-gray-300;
+}
+
+.score-value {
+  @apply text-2xl font-bold text-gaming-accent;
+}
+
+.authenticated-results {
+  @apply space-y-6;
+}
+
+.rewards {
+  @apply space-y-4;
+}
+
+.reward-item {
+  @apply flex items-center space-x-4 bg-gray-900 border border-gray-700 rounded-lg p-4;
+}
+
+.reward-icon {
+  @apply text-2xl;
+}
+
+.reward-info {
+  @apply flex-1 flex justify-between items-center;
+}
+
+.reward-label {
+  @apply text-gray-300;
+}
+
+.reward-value {
+  @apply text-lg font-bold text-yellow-400;
+}
+
+.achievements {
+  @apply text-center;
+}
+
+.achievement-text {
+  @apply text-gray-300;
+}
+
+.guest-results {
+  @apply space-y-6;
+}
+
+.guest-message h4 {
+  @apply text-lg font-semibold text-gaming-accent mb-3;
+}
+
+.guest-message p {
+  @apply text-gray-300 mb-3;
+}
+
+.benefits-list {
+  @apply space-y-2 text-sm text-gray-300;
+}
+
+.benefits-list li {
+  @apply flex items-center;
+}
+
+.guest-actions {
+  @apply text-center space-y-3;
+}
+
+.signup-btn {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors;
+  border: none;
+  cursor: pointer;
+}
+
+.continue-text {
+  @apply text-gray-400 text-sm;
+}
+
+.modal-actions {
+  @apply flex gap-3 p-6 border-t border-gray-700 bg-gray-900;
+}
+
+.play-again-btn {
+  @apply flex-1 bg-gaming-accent hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors;
+  border: none;
+  cursor: pointer;
+}
+
+.close-game-btn {
+  @apply flex-1 bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors;
+  border: none;
+  cursor: pointer;
+} 
